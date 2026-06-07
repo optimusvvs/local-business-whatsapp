@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Business - Order Now</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🏪 YourBusiness</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Your Business</h1>
+            <p>Fresh. Delicious. Delivered to WhatsApp.</p>
+            <button class="cta-btn" onclick="scrollToMenu()">Order Now</button>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <div id="menuContainer" class="menu-grid">
+                <!-- Menu items will be loaded here from Firebase -->
+                <div class="loading">Loading menu...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart -->
+    <section id="cart" class="cart-section">
+        <div class="container">
+            <h2>Your Order</h2>
+            <div id="cartItems" class="cart-items">
+                <p class="empty-cart">No items in cart</p>
+            </div>
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">₹0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax (5%):</span>
+                    <span id="tax">₹0</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span id="total">₹0</span>
+                </div>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Checkout on WhatsApp</button>
+            <button class="clear-cart-btn" onclick="clearCart()">Clear Cart</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We're a local business dedicated to serving our community with quality products and excellent service.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <p><strong>Phone:</strong> <span id="businessPhone">+1 234 567 8900</span></p>
+                <p><strong>Address:</strong> <span id="businessAddress">123 Main St, Your City</span></p>
+                <p><strong>Hours:</strong> <span id="businessHours">9 AM - 9 PM</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Your Business. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-database.js"></script>
+    
+    <!-- Our Scripts -->
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
